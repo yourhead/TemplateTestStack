@@ -1,0 +1,45 @@
+<div class='template'>
+    <div class='template-label'>type=html scope=each</div>
+    <div>
+%[if edit]%
+<p>
+    <h3>This stack demonstrates all of the different types of templates supported in the Stacks API.</h3>
+
+    <h3>Each Scope Templates</h3>
+    Basic templates with each scope. HTML and CSS Tempaltes are also used in edit mode. All of these templates have access to the values from custom controls set in the sidebar for each stack instance.
+    <ul>
+    <li><code>html</code> - HTML content. <i>(edit mode)</i></li>
+    <li><code>css</code> - css content. <i>(edit mode)</i></li>
+    <li><code>js</code> - Javascript content.</li>
+    </ul>
+
+    <h3>Page Scope Templates</h3>
+    Basic templates with page scope. These templates are placed only once on the page no matter how many stack instances appear on that page. These templates do NOT have access to values in custom controls. 
+    <ul>
+    <li><code>css</code> - css content. <i>(edit mode)</i></li>
+    <li><code>js</code> - Javascript content.</li>
+    </ul>
+
+    
+    <h3>Page Scope HTML Templates</h3>
+    When adding page scoped HTML you can choose where the HTML will be added to the page.
+    <ul>
+    <li><code>type=html scope=pagePrefix</code> - page prefix <i>(edit mode)</i></li>
+    <li><code>type=html scope=pageHeadAbove</code> - above head <i>(edit mode)</i></li>
+    <li><code>type=html scope=pageHeadBelow</code> - below head <i>(edit mode)</i></li>
+    <li><code>type=html scope=pageBodyAbove</code> - above body <i>(edit mode)</i></li>
+    <li><code>type=html scope=pageBodyBelow</code> - below body <i>(edit mode)</i></li>
+    </ul>
+
+</p>
+%[endif]%  
+
+%[if !edit]%
+HTML Each Content
+%[endif]%  
+    <ul>
+        <li>Page Path = %pagePath%</li>
+        <li>ID = %id%</li>
+    </ul>
+    </div>
+</div>

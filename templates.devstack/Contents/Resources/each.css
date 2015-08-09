@@ -1,0 +1,5 @@
+
+/* each templates will process ID as the instance-ID */
+#%id% ul {
+	border:%id=slider%px solid red;
+}
